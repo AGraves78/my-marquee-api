@@ -3,6 +3,10 @@ const server = express();
 
 const port = process.env.PORT || 8080;
 
+// routers
+const movieRouter = require('./routers/movie.router');
+server.use(movieRouter);
+
 server.get('/', (req, res) => {
   res.send('It works!');
 });
