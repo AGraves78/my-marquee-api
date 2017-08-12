@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const themoviedb = require('../credentials').themoviedb;
+const themoviedb = process.env.THEMOVIEDB || require('../credentials').themoviedb;
 const baseUrl = `https://api.themoviedb.org/3/`
 const apikey = `?api_key=${themoviedb}`;
 const axios = require('axios');
